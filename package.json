@@ -1,0 +1,9 @@
+{
+  "name": "acme-users-filter",
+  "version": "1.0.0",
+  "description": "Weekend workshop: acme-users-filter",
+  "main": "server.js",
+  "repository": {},
+  "author": "rivermanvr <vrgithub@riversconsulting.com>",
+  "license": "MIT"
+}
