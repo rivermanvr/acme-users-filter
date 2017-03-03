@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Weekend workshop: acme-users-filter",
   "main": "server.js",
-  "repository": {https://github.com/rivermanvr/acme-users-filter},
+  "repository": "https://github.com/rivermanvr/acme-users-filter",
   "author": "Vince Rios",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.0"
+  }
 }
