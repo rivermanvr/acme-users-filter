@@ -4,6 +4,6 @@
   "description": "Weekend workshop: acme-users-filter",
   "main": "server.js",
   "repository": {https://github.com/rivermanvr/acme-users-filter},
-  "author": "rivermanvr <vrgithub@riversconsulting.com>",
+  "author": "Vince Rios",
   "license": "MIT"
 }
