@@ -6,8 +6,8 @@ const swig = require( 'swig' );
 const path = require( 'path' );
 
 swig.setDefaults({ cache: false });
-app.set('view engine', 'html');
-app.engine('html', 'swig.renderFile');
+app.set( 'view engine', 'html' );
+app.engine( 'html', swig.renderFile );
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
