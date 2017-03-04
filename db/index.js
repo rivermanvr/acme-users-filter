@@ -1,4 +1,4 @@
-const acmeDB = require( './db' );
+const acmeDB = require( './_conn' );
 const User = require( './User' );
 
 module.exports = {
