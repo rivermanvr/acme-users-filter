@@ -5,6 +5,23 @@ const User = acmeDB.define('user', {
     lastName: acmeDB.Sequelize.STRING,
     email: acmeDB.Sequelize.STRING,
     location: acmeDB.Sequelize.ARRAY(acmeDB.Sequelize.FLOAT)
+}, {
+    instanceMethods: {
+        mapLastNm: function () {
+            const userRecords = this.findAll();
+            return userRecords;
+        }
+    },
 })
 
+
+
+//             firstLtrArr.push(lastNm.slice(0, 1));
+
+//     return firstLtrArr.reduce(function (resultObj, firstLtr) {
+//         resultObj[firstLtr] = typeof resultObj[firstLtr] !== 'undefined' ? resultObj[firstLtr] + 1 : 1;
+//         return resultObj;
+//     }, {});
+
+// }
 module.exports = User;
