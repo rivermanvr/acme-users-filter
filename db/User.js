@@ -7,8 +7,14 @@ const User = acmeDB.define('user', {
     location: acmeDB.Sequelize.ARRAY(acmeDB.Sequelize.FLOAT)
 }, {
     classMethods: {
-        getUsers: function(){
+        getUsers: function(strLimiter){
+            if (strLimiter){
+                return this.findAll({
+                        where: {lastName: { $like: `${strLimiter}%`}}
+                })
+            } else {
             return this.findAll()
+            }
         }
     }
 })

@@ -33,7 +33,7 @@ const sortKeys = (obj) => {
 const seed = () => {
     return sync()
         .then(() => {
-            return addRandomUsers(10);
+            return addRandomUsers(100);
         })
 }
 
