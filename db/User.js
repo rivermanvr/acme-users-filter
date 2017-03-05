@@ -6,12 +6,11 @@ const User = acmeDB.define('user', {
     email: acmeDB.Sequelize.STRING,
     location: acmeDB.Sequelize.ARRAY(acmeDB.Sequelize.FLOAT)
 }, {
-    instanceMethods: {
+    classMethods: {
         mapLastNm: function () {
-            const userRecords = this.findAll();
-            return userRecords;
+            return this.findAll();
         }
-    },
+    }
 })
 
 
