@@ -1,6 +1,6 @@
 {% extends './layout.html' %}
     {% block content %}
-    <pre>
     {{ users | json }}
-    </pre>
+    {{ userIndex | json }}
+    {{ sortedKeys | json }}
     {% endblock %}    

@@ -1,12 +1,21 @@
 const express = require( 'express' );
 const router = express.Router();
-const models = require( '../db' ).models;
+const acmeDB = require( '../db' );
+const models = acmeDB.models;
 
 router.get('/', (req, res, next) => {
-    models.User.mapLastNm()
-        .then((userRecords) => {
-            res.send(userRecords);
-            //res.render('index', {title: 'Home', users: userRecords});
+    let userRecords, userIndex;
+    models.User.getUsers()
+        .then((_userRecords) => {
+            userRecords = _userRecords;
+            return acmeDB.mapLastNm(userRecords);
+        })
+        .then((_userIndex) => {
+            userIndex = _userIndex;
+            return acmeDB.sortKeys(userIndex);
+        })
+        .then((sortedKeys) => {
+            res.render('index', {title: 'Home', users: userRecords, userIndex: userIndex, sortedKeys: sortedKeys});
         })
 });
 

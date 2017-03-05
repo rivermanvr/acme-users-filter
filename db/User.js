@@ -7,15 +7,8 @@ const User = acmeDB.define('user', {
     location: acmeDB.Sequelize.ARRAY(acmeDB.Sequelize.FLOAT)
 }, {
     classMethods: {
-        mapLastNm: function () {
+        getUsers: function(){
             return this.findAll()
-                .then((usersAll) => {
-                    return usersAll.reduce(function (resultObj, user) {
-                        let firstLtr = user.lastName.slice(0, 1);
-                        resultObj[firstLtr] = typeof resultObj[firstLtr] !== 'undefined' ? resultObj[firstLtr] + 1 : 1;
-                        return resultObj;
-                    }, {});
-                })
         }
     }
 })

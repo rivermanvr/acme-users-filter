@@ -18,10 +18,22 @@ const addRandomUsers = (count) => {
     }
 }
 
+const mapLastNm = function (usersAll) {
+            return usersAll.reduce(function (resultObj, user) {
+                let firstLtr = user.lastName.slice(0, 1);
+                resultObj[firstLtr] = typeof resultObj[firstLtr] !== 'undefined' ? resultObj[firstLtr] + 1 : 1;
+                return resultObj;
+            }, {});
+}
+
+const sortKeys = (obj) => {
+    return Object.keys(obj).sort();
+}
+
 const seed = () => {
     return sync()
         .then(() => {
-            return addRandomUsers(100);
+            return addRandomUsers(10);
         })
 }
 
@@ -29,6 +41,8 @@ module.exports = {
     models: {
         User
     },
+    mapLastNm,
+    sortKeys,
     seed,
     sync,
 };
