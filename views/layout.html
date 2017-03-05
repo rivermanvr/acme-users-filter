@@ -6,6 +6,30 @@
     </head>
     <body>
         <div class='container'>
+            <h2>Acme Users Filter</h2>
+        </div>
+        <div class='container'>
+            <form action='/regenerate' method='POST'>
+
+                <button class='btn btn-default resetBtn'>
+                    <span class='glyphicon glyphicon-hand-up' aria-hidden="true"></span>
+                    Reset Users
+                </button>
+            </form>
+        </div>
+        <div class='container indexMenu'>
+            index menu goes here
+        </div>
+        <div class='container indexMenu'>
+            <ul class='heading'>
+                <li class='fn'>First Name</li>
+                <li class='ln'>Last Name</li>
+                <li class='em'>Email</li>
+                <li class='loc'>Location</li>
+            </ul>
+
+        </div>
+        <div class='container'>
             {% block content  %}{% endblock %}
         </div>        
     </body>

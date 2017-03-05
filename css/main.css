@@ -60,3 +60,17 @@ h1, h2, h3, h4, h5, h6{
 b, strong{
     font-weight: 400;
 }
+.resetBtn {
+    margin-bottom: 20px;
+}
+.indexMenu {
+    margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.heading	{
+
+}
+.fn'>First Name</li>
+                <li class='ln'>Last Name</li>
+                <li class='em'>Email</li>
+                <li class='loc'>Location</li>
