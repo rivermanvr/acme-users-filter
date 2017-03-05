@@ -68,9 +68,18 @@ b, strong{
 	border-bottom: 1px solid #ccc;
 }
 .heading	{
-
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-.fn			
-                <li class='ln'>Last Name</li>
-                <li class='em'>Email</li>
-                <li class='loc'>Location</li>
+.fname		{
+	display: inline;
+}		
+.lname		{
+	display: inline;
+}
+.email		{
+	display: inline;
+}
+.location	{
+	display: inline;
+}
