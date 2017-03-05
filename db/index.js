@@ -21,7 +21,7 @@ const addRandomUsers = (count) => {
 const seed = () => {
     return sync()
         .then(() => {
-            return addRandomUsers(50);
+            return addRandomUsers(100);
         })
 }
 

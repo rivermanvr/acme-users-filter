@@ -8,19 +8,16 @@ const User = acmeDB.define('user', {
 }, {
     classMethods: {
         mapLastNm: function () {
-            return this.findAll();
+            return this.findAll()
+                .then((usersAll) => {
+                    return usersAll.reduce(function (resultObj, user) {
+                        let firstLtr = user.lastName.slice(0, 1);
+                        resultObj[firstLtr] = typeof resultObj[firstLtr] !== 'undefined' ? resultObj[firstLtr] + 1 : 1;
+                        return resultObj;
+                    }, {});
+                })
         }
     }
 })
 
-
-
-//             firstLtrArr.push(lastNm.slice(0, 1));
-
-//     return firstLtrArr.reduce(function (resultObj, firstLtr) {
-//         resultObj[firstLtr] = typeof resultObj[firstLtr] !== 'undefined' ? resultObj[firstLtr] + 1 : 1;
-//         return resultObj;
-//     }, {});
-
-// }
 module.exports = User;
