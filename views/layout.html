@@ -21,9 +21,9 @@
             <nav>
                 <ul class='nav nav-tabs'>
                     {% for sortedKey in sortedKeys %}
-                    <li role="presentation" id="{{ sortedKey.id }}" {% if nav= "{{ sortedKey.id }}" %} class='active' {% endif %}><a href="/users/filter/{{ sortedKey.id }}">{{ sortedKey.id }}({{ sortedKey.repeatVal }})</a></li>
+                    <li role="presentation" id="{{ sortedKey.id }}" {% if nav== '{{ sortedKey.id }}' %} class='active' {% endif %}><a href="/users/filter/{{ sortedKey.id }}">{{ sortedKey.id }}({{ sortedKey.repeatVal }})</a></li>
                     {% endfor %}
-                    <li role="presentation" id="all" {% if nav= 'all' %} class='active' {% endif %}><a href="/">(all users)</a></li>
+                    <li role="presentation" id="all" {% if nav== 'all' %} class='active' {% endif %}><a href="/">(all users)</a></li>
                 </ul>
             </nav>
         </div>

@@ -1,7 +1,6 @@
 const express = require( 'express' );
 const router = express.Router();
 const acmeDB = require( '../db' );
-
 const models = acmeDB.models;
 
 router.get('/', (req, res, next) => {
