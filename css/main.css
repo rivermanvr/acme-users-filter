@@ -76,38 +76,22 @@ b, strong 	{
 }
 .headingLN	{
 	display: inline;
-	position: absolute; 
-	left: 250px;
 }
 .headingEM	{
 	display: inline;
-	position: absolute;
-	left: 400px;
 }
 .headingLO	{
 	display: inline;
-	position: absolute; 
-	left: 700px;
 }
 .detailFN	{
 	display: inline;
 }
 .detailLN	{
 	display: inline;
-	position: absolute; 
-	left: 250px;
 }
 .detailEM	{
 	display: inline;
-	position: absolute; 
-	left: 400px;
 }
 .detailLO	{
 	display: inline;
-	position: absolute; 
-	left: 700px;
-	margin-right: 30px;
 }
-    .center {
-        text-align: center;
-    }
