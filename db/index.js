@@ -2,6 +2,8 @@ const acmeDB = require( './_conn' );
 const User = require( './User' );
 const faker = require( 'faker' );
 
+const _indexDB = [];
+
 const sync = () => {
     return acmeDB.sync({ force: true });
 };
@@ -29,7 +31,7 @@ const mapLastNm = function (usersAll) {
 const sortKeys = (obj) => {
     let sortedKeyArr = Object.keys(obj).sort();
     for (let i = 0; i < sortedKeyArr.length; i++) {
-        sortedKeyArr[i] = {id: sortedKeyArr[i], repeatVal: obj[sortedKeyArr[i]]}
+        _indexDB[i] = {id: _indexDB[i], repeatVal: obj[_indexDB[i]]}
     }
     return sortedKeyArr;
 }
@@ -39,13 +41,22 @@ const seed = () => {
         .then(() => {
             return addRandomUsers(100);
         })
+        .then(() => {
+            return User.getUsers();
+        })
+        .then((_userRecords) => {
+            return mapLastNm(_userRecords);
+        })
+        .then((_userIndex) => {
+            return acmeDB.sortKeys(_userIndex);
+        })
+        .then((_result) => {console.log(_result)})
 }
 
 module.exports = {
     models: {
         User
     },
-    mapLastNm,
     sortKeys,
     seed,
     sync,
