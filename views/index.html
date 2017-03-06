@@ -2,11 +2,11 @@
 
 {% block content %}
     {% for user in users %}
-        <ul class='center'>
-            <li class='detailFN'>{{ user.firstName }}</li>
-            <li class='detailLN'>{{ user.lastName }}</li>
-            <li class='detailEM'>{{ user.email }}</li>
-            <li class='detailLO'>{{ user.location }}</li>  
-        </ul>
+        <tr>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.location }}</td>
+        <tr>
     {% endfor %}
 {% endblock %}    

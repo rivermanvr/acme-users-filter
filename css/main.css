@@ -71,27 +71,9 @@ b, strong 	{
     margin-bottom: 10px;
 	border-bottom: 1px solid #ccc;
 }
-.headingFN	{
+.headingL	{
 	display: inline;
 }
-.headingLN	{
-	display: inline;
-}
-.headingEM	{
-	display: inline;
-}
-.headingLO	{
-	display: inline;
-}
-.detailFN	{
-	display: inline;
-}
-.detailLN	{
-	display: inline;
-}
-.detailEM	{
-	display: inline;
-}
-.detailLO	{
+.detailL	{
 	display: inline;
 }

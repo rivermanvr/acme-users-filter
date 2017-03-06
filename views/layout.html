@@ -27,16 +27,18 @@
                 </ul>
             </nav>
         </div>
-        <div class='container headingDiv'>
-            <h4><ul class='center'>
-                <li class='headingFN'>First Name</li>
-                <li class='headingLN'>Last Name</li>
-                <li class='headingEM'>Email</li>
-                <li class='headingLO'>Location</li>
-            </ul></h4>
-        </div>
         <div class='container'>
-            {% block content  %}{% endblock %}
+            <table class='table'>
+                <thead class='headingDiv'>
+                    <th><h4>First Name</h4></th>
+                    <th><h4>Last Name</h4></th>
+                    <th><h4>Email</h4></th>
+                    <th><h4>Location</h4></th>  
+                </thead>
+                <tbody>
+                    {% block content  %}{% endblock %}
+                </tbody>
+            </table
         </div>        
     </body>
 </html>
