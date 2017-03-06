@@ -49,4 +49,4 @@ module.exports = {
     sortKeys,
     seed,
     sync,
-};
+}
