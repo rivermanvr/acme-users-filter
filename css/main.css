@@ -67,27 +67,44 @@ b, strong 	{
     margin-bottom: 10px;
 	border-bottom: 1px solid #ccc;
 }
-.indexList	{
-	display: inline;
-	margin-right: 15px;
-}
 .headingDiv 	{
     margin-bottom: 10px;
 	border-bottom: 1px solid #ccc;
 }
-.headingFN, .headingLN, .headingEM, headingLN	{
+.headingFN	{
 	display: inline;
-	margin-right: 20px;
 }
 .headingLN	{
 	display: inline;
-	margin-right: 20px;
+	position: absolute; 
+	left: 250px;
 }
 .headingEM	{
 	display: inline;
-	margin-right: 60px;
+	position: absolute;
+	left: 400px;
 }
-.headingLN	{
+.headingLO	{
 	display: inline;
-	margin-right: 20px;
+	position: absolute; 
+	left: 700px;
+}
+.detailFN	{
+	display: inline;
+}
+.detailLN	{
+	display: inline;
+	position: absolute; 
+	left: 250px;
+}
+.detailEM	{
+	display: inline;
+	position: absolute; 
+	left: 400px;
+}
+.detailLO	{
+	display: inline;
+	position: absolute; 
+	left: 700px;
+	margin-right: 30px;
 }

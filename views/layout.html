@@ -18,12 +18,12 @@
             </form>
         </div>
         <div class='container indexDiv '>
-            <nav class='nav nav-tabs'>
-                <ul>
+            <nav>
+                <ul class='nav nav-tabs'>
                     {% for sortedKey in sortedKeys %}
-                    <li id="{{ sortedKey.id }}" class='indexList' {% if nav== '{{ sortedKey.id }}' %} class='active' {% endif %}>{{ sortedKey.id }}({{ sortedKey.repeatVal }})</li>
+                    <li role="presentation" id="{{ sortedKey.id }}" {% if nav== '{{ sortedKey.id }}' %} class='active' {% endif %}><a href="/users/filter/{{ sortedKey.id }}">{{ sortedKey.id }}({{ sortedKey.repeatVal }})</a></li>
                     {% endfor %}
-                    <li id="all" class='indexList' {% if nav== 'all' %} class='active' {% endif %}><a href="/">(all users)</li>
+                    <li role="presentation" id="all" {% if nav== 'all' %} class='active' {% endif %}><a href="/">(all users)</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,7 +32,7 @@
                 <li class='headingFN'>First Name</li>
                 <li class='headingLN'>Last Name</li>
                 <li class='headingEM'>Email</li>
-                <li class='headingLN'>Location</li>
+                <li class='headingLO'>Location</li>
             </ul></h4>
 
         </div>

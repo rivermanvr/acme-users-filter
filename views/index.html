@@ -1,5 +1,11 @@
 {% extends './layout.html' %}
     {% block content %}
-    {{ users | json }}
-    {{ sortedKeys | json }}
+        {% for user in users %}
+            <ul>
+                <li class='detailFN'>{{ user.firstName }}</li>
+                <li class='detailLN'>{{ user.lastName }}</li>
+                <li class='detailEM'>{{ user.email }}</li>
+                <li class='detailLO'>{{ user.location }}</li>  
+            </ul>
+        {% endfor %}
     {% endblock %}    
