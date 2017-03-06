@@ -27,7 +27,11 @@ const mapLastNm = function (usersAll) {
 }
 
 const sortKeys = (obj) => {
-    return Object.keys(obj).sort();
+    let sortedKeyArr = Object.keys(obj).sort();
+    for (let i = 0; i < sortedKeyArr.length; i++) {
+        sortedKeyArr[i] = {id: sortedKeyArr[i], repeatVal: obj[sortedKeyArr[i]]}
+    }
+    return sortedKeyArr;
 }
 
 const seed = () => {

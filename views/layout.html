@@ -17,16 +17,23 @@
                 </button>
             </form>
         </div>
-        <div class='container indexMenu'>
-            index menu goes here
+        <div class='container indexDiv '>
+            <nav class='nav nav-tabs'>
+                <ul>
+                    {% for sortedKey in sortedKeys %}
+                    <li id="{{ sortedKey.id }}" class='indexList' {% if nav== '{{ sortedKey.id }}' %} class='active' {% endif %}>{{ sortedKey.id }}({{ sortedKey.repeatVal }})</li>
+                    {% endfor %}
+                    <li id="all" class='indexList' {% if nav== 'all' %} class='active' {% endif %}><a href="/">(all users)</li>
+                </ul>
+            </nav>
         </div>
-        <div class='container indexMenu'>
-            <ul class='heading'>
-                <li class='fname'>First Name</li>
-                <li class='lname'>Last Name</li>
-                <li class='email'>Email</li>
-                <li class='location'>Location</li>
-            </ul>
+        <div class='container headingDiv'>
+            <h4><ul>
+                <li class='headingFN'>First Name</li>
+                <li class='headingLN'>Last Name</li>
+                <li class='headingEM'>Email</li>
+                <li class='headingLN'>Location</li>
+            </ul></h4>
 
         </div>
         <div class='container'>

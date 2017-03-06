@@ -47,7 +47,7 @@ table {
 
 /*Custom css follows:*/
 
-html, body{
+html, body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -57,29 +57,37 @@ html, body{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Abel', sans-serif;   
 }
-b, strong{
+b, strong 	{
     font-weight: 400;
 }
-.resetBtn {
+.resetBtn 	{
     margin-bottom: 20px;
 }
-.indexMenu {
+.indexDiv	{
     margin-bottom: 10px;
 	border-bottom: 1px solid #ccc;
 }
-.heading	{
-    margin-top: 5px;
-    margin-bottom: 5px;
+.indexList	{
+	display: inline;
+	margin-right: 15px;
 }
-.fname		{
-	display: inline;
-}		
-.lname		{
-	display: inline;
+.headingDiv 	{
+    margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
 }
-.email		{
+.headingFN, .headingLN, .headingEM, headingLN	{
 	display: inline;
+	margin-right: 20px;
 }
-.location	{
+.headingLN	{
 	display: inline;
+	margin-right: 20px;
+}
+.headingEM	{
+	display: inline;
+	margin-right: 60px;
+}
+.headingLN	{
+	display: inline;
+	margin-right: 20px;
 }

@@ -15,8 +15,14 @@ router.get('/', (req, res, next) => {
             return acmeDB.sortKeys(userIndex);
         })
         .then((sortedKeys) => {
-            res.render('index', {title: 'Home', users: userRecords, userIndex: userIndex, sortedKeys: sortedKeys});
+            res.render('index', {title: 'Home', nav: 'all', users: userRecords, sortedKeys: sortedKeys});
         })
+});
+
+router.post('/regenerate', (req, res, next) => {
+    acmeDB.seed()
+        .then(() => res.redirect( '/' ))
+        .catch(err => console.log(err));
 });
 
 module.exports = router;
