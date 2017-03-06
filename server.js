@@ -6,4 +6,5 @@ acmeDB.seed()
     .catch(err => console.log(err));
 
 const port = process.env.PORT || 3000;
+
 server.listen(port, () => console.log(`listening on port ${port}`));
