@@ -13,7 +13,7 @@ const User = acmeDB.define('user', {
                         where: {lastName: { $like: `${strLimiter}%`}}
                 })
             } else {
-            return this.findAll()
+                return this.findAll();
             }
         }
     }
