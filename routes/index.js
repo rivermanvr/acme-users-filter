@@ -3,17 +3,12 @@ const router = express.Router();
 const acmeDB = require( '../db' );
 const models = acmeDB.models;
 
-// router.use('/', (req, res, next) => {
-//     models.Users.mapLastNm()
-    
-    
-//     .then(countArr => {
-//         res.locals.letterCounts = countArr;
-//     }).then(() => next());
-
-
-
-// });
+router.use('/', (req, res, next) => {
+    models.User.mapLastNm()
+        .then(_sortedKeys => {
+            res.locals.sortedKeys = _sortedKeys;
+        }).then(() => next());
+});
 
 router.get('/', (req, res, next) => {
     let userRecords, userIndex;
@@ -23,7 +18,7 @@ router.get('/', (req, res, next) => {
             return models.User.mapLastNm();
         })
         .then((sortedKeys) => {
-            res.render('index', {title: 'Home', nav: 'all', users: userRecords, sortedKeys: sortedKeys});
+            res.render('index', {title: 'Home', nav: 'all', users: userRecords});
         })
         .catch((err) => console.log(err));
 });

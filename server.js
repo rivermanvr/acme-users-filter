@@ -4,7 +4,7 @@ const acmeDB = require( './db' );
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
 
-acmeDB.seed(true)
+acmeDB.seed()
     .then(() => console.log('your data is seeded'))
     .catch(err => console.log(err));
 

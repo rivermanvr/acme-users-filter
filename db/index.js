@@ -2,8 +2,8 @@ const acmeDB = require( './_conn' );
 const User = require( './User' );
 const faker = require( 'faker' );
 
-const sync = (force) => {
-    return acmeDB.sync({ force });
+const sync = () => {
+    return acmeDB.sync({ force: true });
 };
 
 const addRandomUsers = (count) => {
@@ -20,6 +20,6 @@ const addRandomUsers = (count) => {
     return Promise.all(promissArr);
 };
 
-const seed = (force) => sync().then(() => addRandomUsers(100));
+const seed = () => sync().then(() => addRandomUsers(100));
 
 module.exports = { models: { User }, seed, sync }
