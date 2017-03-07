@@ -26,24 +26,21 @@ const userMethodDefinition = {
             }
         },
         mapLastNm: function() {
-
-
-
-                                const mapLastNm = function (usersAll) {
-                                            return usersAll.reduce(function (resultObj, user) {
-                                                let firstLtr = user.lastName.slice(0, 1);
-                                                resultObj[firstLtr] = typeof resultObj[firstLtr] !== 'undefined' ? resultObj[firstLtr] + 1 : 1;
-                                                return resultObj;
-                                            }, {});
-                                }
-
-                                const sortKeys = (obj) => {
-                                    let sortedKeyArr = Object.keys(obj).sort();
-                                    for (let i = 0; i < sortedKeyArr.length; i++) {
-                                        sortedKeyArr[i] = {id: sortedKeyArr[i], repeatVal: obj[sortedKeyArr[i]]}
-                                    }
-                                    return sortedKeyArr;
-                                }
+            return this.getUsers()
+                .then((_userRecords) => {
+                    return _userRecords.reduce(function (resultObj, user) {
+                        let firstLtr = user.lastName.slice(0, 1);
+                        resultObj[firstLtr] = typeof resultObj[firstLtr] !== 'undefined' ? resultObj[firstLtr] + 1 : 1;
+                        return resultObj;
+                    }, {});
+                })
+                .then((_userIndexObj) => {
+                    let sortedKeyArr = Object.keys(_userIndexObj).sort();
+                    for (let i = 0; i < sortedKeyArr.length; i++) {
+                        sortedKeyArr[i] = {id: sortedKeyArr[i], repeatVal: _userIndexObj[sortedKeyArr[i]]}
+                    }
+                    return sortedKeyArr;
+                })
 
             }
     }
