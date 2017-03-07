@@ -24,7 +24,28 @@ const userMethodDefinition = {
                         ]
                 });
             }
-        }
+        },
+        mapLastNm: function() {
+
+
+
+                                const mapLastNm = function (usersAll) {
+                                            return usersAll.reduce(function (resultObj, user) {
+                                                let firstLtr = user.lastName.slice(0, 1);
+                                                resultObj[firstLtr] = typeof resultObj[firstLtr] !== 'undefined' ? resultObj[firstLtr] + 1 : 1;
+                                                return resultObj;
+                                            }, {});
+                                }
+
+                                const sortKeys = (obj) => {
+                                    let sortedKeyArr = Object.keys(obj).sort();
+                                    for (let i = 0; i < sortedKeyArr.length; i++) {
+                                        sortedKeyArr[i] = {id: sortedKeyArr[i], repeatVal: obj[sortedKeyArr[i]]}
+                                    }
+                                    return sortedKeyArr;
+                                }
+
+            }
     }
 };
 
