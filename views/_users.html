@@ -1,0 +1,18 @@
+<table class='table'>
+    <thead class='headingDiv'>
+        <th><h4>First Name</h4></th>
+        <th><h4>Last Name</h4></th>
+        <th><h4>Email</h4></th>
+        <th><h4>Location</h4></th>  
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.location }}</td>
+            <tr>
+        {% endfor %}
+    </tbody>
+</table>
