@@ -4,10 +4,25 @@
   "description": "Weekend workshop: acme-users-filter",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:dev": "nodemon ./node_modules/mocha/bin/mocha",
     "start:dev": "nodemon"
   },
-  "repository": {https://github.com/rivermanvr/acme-users-filter},
-  "author": "rivermanvr <vrgithub@riversconsulting.com>",
-  "license": "MIT"
+  "repository": "https://github.com/rivermanvr/acme-users-filter",
+  "author": "Vince Rios",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.0",
+    "faker": "^4.1.0",
+    "path": "^0.12.7",
+    "pg": "^6.1.2",
+    "sequelize": "^3.30.2",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  }
 }

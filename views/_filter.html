@@ -1,0 +1,16 @@
+<div class='indexDiv'>
+    <ul class='nav nav-tabs'>
+        {% for sortedKey in sortedKeys %}
+            <li
+                {% if nav == sortedKey.id %} 
+                    class='active' 
+                {% endif %}
+            ><a href="/users/filter/{{ sortedKey.id }}">{{ sortedKey.id }}({{ sortedKey.repeatVal }})</a></li>
+        {% endfor %}
+            <li
+                {% if nav == 'all' %} 
+                    class='active' 
+                {% endif %}
+            ><a href="/">(all users)</a></li>
+    </ul>
+</div>

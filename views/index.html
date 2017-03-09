@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link href='/vendor/bootstrap/dist/css/bootstrap.css' rel='stylesheet'>
+        <link href='/css/main.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class='container'>
+            <h2>Acme Users Filter</h2>
+            <form action='/regenerate' method='POST'>
+
+                <button class='btn btn-default resetBtn'>
+                    <span class='glyphicon glyphicon-hand-up' aria-hidden="true"></span>
+                    Reset Users
+                </button>
+            </form>
+            <div class= 'row'>
+                <div class='col-sm-12'>
+                    {% include "_filter.html" %}   
+                    {% include "_users.html" %}
+                </div>
+            </div>  
+        </div>      
+    </body>
+</html>
